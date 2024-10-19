@@ -82,8 +82,27 @@ q {
   -o-transform: translate(-50%, -50%);
 }
 
-#hero .content h1 {
+#hero h1 {
   color: white;
+}
+
+#hero .content button {
+  background-color: #0095ff;
+  color: aliceblue;
+  cursor: pointer;
+  margin: 8px;
+  padding: 6px;
+  border: 0;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+}
+
+#hero a {
+  text-decoration: none;
+  color: aliceblue;
 }
 
 header {
@@ -92,8 +111,7 @@ header {
 }
 
 #about {
-  margin: 5rem 0;
-  padding: 0 1rem;
+  padding: 5rem 1rem;
 }
 
 #about .image {
@@ -180,6 +198,10 @@ header {
   padding: 1rem;
 }
 
+#contact header {
+  text-align: center;
+}
+
 #contact .content {
   display: flex;
   flex-direction: column;
@@ -191,6 +213,7 @@ header {
   width: 8rem;
   height: 8rem;
   object-fit: cover;
+  cursor: pointer;
 }
 
 #contact .content a {
