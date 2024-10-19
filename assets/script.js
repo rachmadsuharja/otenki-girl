@@ -1,9 +1,14 @@
-function play() {
-  const audio = document.getElementById("music");
+function playBGM() {
+  const audio = document.getElementById("bgm");
   audio.play();
 }
 
-function firstIlustration() {
-  const modal = document.querySelector(".modal");
-  modal.style.display = "block";
+function playVoice() {
+  const audio = document.getElementById("voice");
+  audio.play();
+}
+
+function letsGo() {
+  playBGM();
+  playVoice();
 }
