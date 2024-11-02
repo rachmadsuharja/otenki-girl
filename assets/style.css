@@ -59,15 +59,73 @@ q {
   -o-border-radius: 1rem;
 }
 
-#hero {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("img/e9e4b1b2384bc30905b776b86c94674ac5107f1b.webp");
-  height: 90%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+.loading {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: aliceblue;
+  opacity: 1;
+  transition: opacity 1s ease;
+  -webkit-transition: opacity 1s ease;
+  -moz-transition: opacity 1s ease;
+  -ms-transition: opacity 1s ease;
+  -o-transition: opacity 1s ease;
+}
+
+.loading img {
+  width: 5rem;
+  animation: spin 1s linear infinite;
+  -webkit-animation: spin 1s linear infinite;
+}
+
+.loading p {
+  font-size: 1rem;
+  animation: fade 1s linear infinite;
+  -webkit-animation: fade 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  45% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+#hero #hero-bg {
   position: relative;
-  color: white;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  filter: brightness(45%);
+  -webkit-filter: brightness(45%);
 }
 
 #hero .content {
@@ -87,23 +145,47 @@ q {
   color: white;
 }
 
+#hero p {
+  color: #b1b1b1;
+}
+
+#hero a {
+  margin-inline: auto;
+  text-decoration: none;
+  color: aliceblue;
+}
+
 #hero .content button {
+  display: flex;
+  align-items: center;
   background-color: #0095ff;
   color: aliceblue;
   cursor: pointer;
   margin: 8px;
-  padding: 6px;
+  padding: 0.5rem 1rem;
   border: 0;
-  border-radius: 0.5rem;
-  -webkit-border-radius: 0.5rem;
-  -moz-border-radius: 0.5rem;
-  -ms-border-radius: 0.5rem;
-  -o-border-radius: 0.5rem;
+  transition: 500;
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+  -webkit-transition: 0.5s;
+  -moz-transition: 500;
+  -ms-transition: 500;
+  -o-transition: 500;
 }
 
-#hero a {
-  text-decoration: none;
-  color: aliceblue;
+#hero .content button:hover {
+  transform: rotate(-3deg);
+  -webkit-transform: rotate(-3deg);
+  -moz-transform: rotate(-3deg);
+  -ms-transform: rotate(-3deg);
+  -o-transform: rotate(-3deg);
+}
+
+#hero svg {
+  width: 1.3rem;
 }
 
 header {

@@ -12,3 +12,13 @@ function letsGo() {
   playBGM();
   playVoice();
 }
+
+window.addEventListener("load", () => {
+  setTimeout(() => {
+    const loading = document.getElementById("loading");
+    loading.style.opacity = "0";
+    loading.addEventListener("transitionend", function () {
+      loading.style.display = "none";
+    });
+  }, 1000);
+});
